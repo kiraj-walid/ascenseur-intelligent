@@ -32,6 +32,7 @@ public class Floor {
                 Thread.currentThread().interrupt();
             }
         }
+        editing = true; // Set the editing flag to true while modifying the list
         if(person.getDestinationFloor() > this.floorNumber) {
             waitingPeopleUp.add(person);
         } else {
@@ -49,6 +50,7 @@ public class Floor {
                 Thread.currentThread().interrupt();
             }
         }
+        editing = true; // Set the editing flag to true while modifying the list
         if(person.getDestinationFloor() > this.floorNumber) {
             waitingPeopleUp.remove(person);
         } else {
